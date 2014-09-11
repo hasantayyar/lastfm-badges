@@ -8,7 +8,11 @@ router.get('/:username', function(req, res) {
     		json: true
 	}, function (error, response, body) {
 		if (!error && response.statusCode === 200) {
-			res.render('stats-daily',{data: body});
+			timeStart = body.user.registered.unixtime;
+			timeEnd = (new Date()).getTime()/1000;
+			days = Math.floor((timeEnd-timeStart)/(60*60*24));
+			avgPlaysDaily = Math.floor(body.user.playcount/days);
+			res.render('stats-daily',{avgPlaysDaily: avgPlaysDaily, avatar : body.user.image[3]['#text'] , data: body});
 		}
 	})
 });

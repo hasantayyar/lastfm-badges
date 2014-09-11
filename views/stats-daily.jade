@@ -6,6 +6,10 @@ block content
         div(class="uk-width-medium-1-1")
             div(class="uk-vertical-align uk-text-center",style="height: 300px;background:#efefdf")
                 div(class="uk-vertical-align-middle uk-width-1-2")
-                        p(class="uk-text-large")= data.user.name
-                        p= data.user.registered.unixtime
+                        p
+                            img(src=avatar)
+                        p
+                            strong(class="uk-text-large")= data.user.name
+                        p= data.user.registered["#text"]
                         p= data.user.playcount
+                        p= avgPlaysDaily
