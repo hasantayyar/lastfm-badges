@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Serdar Ortaç Şarkı Sözleri Oluştur' });
+  res.render('index', { title: 'Last.fm badges' });
 });
 
 module.exports = router;
