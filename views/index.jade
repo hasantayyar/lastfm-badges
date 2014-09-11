@@ -7,8 +7,9 @@ block content
                 div(class="uk-vertical-align uk-text-center",style="height: 300px;background:#efefdf")
                     div(class="uk-vertical-align-middle uk-width-1-2")
                             h2(class="uk-heading-large") Get your badge
-                            p
-                                a(class="uk-button uk-button-success uk-button-large",href="/stats")
+                            form(class="uk-form")
+                                input(id="username")
+                                a(class="uk-button uk-button-success", onclick="location.href='/stats/'+document.getElementById('username').value")
                                     i(class="uk-icon-cog uk-text-success") 
                                     |  Listens per day
 
