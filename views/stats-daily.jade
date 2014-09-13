@@ -4,12 +4,12 @@ block content
    div(class="uk-container uk-container-center")
     div(class="uk-grid",data-uk-grid-margin)
         div(class="uk-width-medium-1-1")
-            div(class="uk-vertical-align uk-text-center",style="height: 300px;background:#efefdf")
+            div(class="uk-vertical-align uk-text-center",style="height: auto;background:#efefdf")
                 div(class="uk-vertical-align-middle uk-width-1-2")
                         p
-                            img(src=avatar)
+                            img(src=avatar height=200)
                         p
                             strong(class="uk-text-large")= data.user.name
                         p= data.user.registered["#text"]
-                        p= data.user.playcount
-                        p= avgPlaysDaily
+                        p
+                           a(href="https://lastfm-badges.herokuapp.com")!=badge

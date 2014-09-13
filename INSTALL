@@ -1,0 +1,2 @@
+heroku config:set CLOUDINARY_URL=cloudinary://234667151491746:GI8cY1kmNm8sJkscX17M9FREfRI@hasantayyar 
+git push heroku master
